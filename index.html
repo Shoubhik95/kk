@@ -11,16 +11,28 @@
 
   <!-- HEADER -->
   <header>
+    <header class="header">
+  <div class="container">
     <div class="logo">
-      <img src="logo/Vit Bhopal Logo.png" alt="VIT Bhopal Logo">
+      <img src="logo\Vit Bhopal Logo.png" alt="logo" width="100vw">
     </div>
-    <nav>
+
+    <!-- Hamburger Button -->
+    <button class="menu-toggle" id="menuToggle">
+      ☰
+    </button>
+
+    <!-- Nav Links -->
+    <nav class="nav" id="navMenu">
       <ul>
-        <li><a href="https://vitbhopal.ac.in/" target="_blank">Main Page</a></li>
+        <li><a href="Home.html">Home</a></li>
         <li><a href="Info.html">Information</a></li>
         <li><a href="gallery.html">Gallery</a></li>
       </ul>
     </nav>
+  </div>
+</header>
+
   </header>
 
   <!-- Mid SECTION WITH VIDEO -->
@@ -113,6 +125,14 @@
 
 
 </footer>
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const navMenu = document.getElementById('navMenu');
+
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+</script>
 
 
 </body>
