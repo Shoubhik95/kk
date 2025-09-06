@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f0f4ff; /* page background */
+  background-color: #f0f4ff;
   color: #222;
   line-height: 1.6;
 }
@@ -40,6 +40,33 @@ body {
   margin: 0;
   padding: 0;
 }
+/* For mobile */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #111c3a;
+    z-index: 999;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    padding: 1rem 2rem;
+    gap: 1rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav.active {
+    display: block;
+    animation: slideDown 0.3s ease;
+  }
+}
 
 .nav a {
   color: #fff;
@@ -60,9 +87,9 @@ body {
 /* Responsive part */
 @media (max-width: 768px) {
   .nav {
-    display: none; /* hidden by default */
+    display: none; 
     position: absolute;
-    top: 60px; /* below header */
+    top: 60px; 
     left: 0;
     width: 100%;
     background: #111c3a;
@@ -75,11 +102,11 @@ body {
   }
 
   .menu-toggle {
-    display: block; /* show button */
+    display: block; 
   }
 
   .nav.active {
-    display: block; /* show menu when toggled */
+    display: block; 
     animation: slideDown 0.3s ease;
   }
 }
@@ -200,7 +227,7 @@ footer article {
 }
 /* === FOOTER === */
 footer {
-  background-color: #002a53;          /* dark background */
+  background-color: #002a53;          
   color: #eee;
   padding: 3rem 2rem;
   font-family: inherit;
@@ -324,12 +351,11 @@ footer .bottom {
 }
 /* === ABOUT SECTION === */
 .about {
-  /* Transparent / glass background instead of solid color */
-  background: rgba(255,255,255,0.15);    /* semi-transparent white */
-  backdrop-filter: blur(6px);            /* blur video behind */
-  -webkit-backdrop-filter: blur(6px);    /* Safari support */
+  background: rgba(255,255,255,0.15);    
+  backdrop-filter: blur(6px);            
+  -webkit-backdrop-filter: blur(6px);    
   padding: 4rem 2rem;
-  border-radius: 12px;                   /* optional rounded corners */
+  border-radius: 12px;                 
 }
 
 .about-container {
@@ -354,7 +380,7 @@ footer .bottom {
 }
 
 .about-text p {
-  color: #000000; /* change to white for better contrast on transparent background */
+  color: #000000; 
   font-size: 1rem;
   line-height: 1.8;
   margin-bottom: 1rem;
